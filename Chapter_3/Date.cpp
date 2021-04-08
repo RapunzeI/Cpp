@@ -1,19 +1,7 @@
 #include <iostream>
 #include <string>
+#include "Date.h"
 using namespace std;
-
-class Date
-{
-private:
-	int year, month, day;
-public:
-	Date(int y, int m, int d);
-	Date(string s);
-	void show();
-	int getYear();
-	int getMonth();
-	int getDay();
-};
 
 Date::Date(int y, int m, int d){
 	year = y;
@@ -41,11 +29,4 @@ int Date::getMonth(){
 
 int Date::getDay(){
 	return day;
-}
-
-int main(){
-	Date birth(2014, 3, 20);
-	Date independenceDay("1945/8/15");
-	independenceDay.show();
-	cout << birth.getYear() << "," << birth.getMonth() << "," << birth.getDay() << endl;
 }
